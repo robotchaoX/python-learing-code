@@ -1,5 +1,10 @@
 print("hello world")
-print("hello \n world")
-print("hello \" world")
-print("1\t 2\t 3")
-print("11\t 22\t 33")
+
+# \t 在控制台输出一个 制表符，协助在输出文本时 垂直方向 保持对齐
+print("1\t2\t3")
+
+# \n 在控制台输出一个 换行符
+print("hello\n python")
+
+# \" 可以在控制台输出 "
+print("hello\"hello")
