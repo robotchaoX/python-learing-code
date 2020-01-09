@@ -1,10 +1,5 @@
-import _00_嵌套打印
+# import 导入模块
 import _01_九九乘法表
 
-_00_嵌套打印.qian_tao()
-
+# 调用模块
 _01_九九乘法表.multiple_table()
-
-
-
-
