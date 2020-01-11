@@ -15,14 +15,18 @@ for poem_str in poem:
     print(poem_strip)
     # print("|%s|" % poem_str.strip().center(10, " "))  # 去除空白字符后居中
 
+str = "   ddddddddd ssss \r eeeeeeee \n \t aaaa    "
+str1 = str.strip()  # ???
+print(str1)
+
 # lstrip()方法用于截掉字符串左边的空格或指定字符。
 str = "     this is string example....wow!!!     "
 print(str.lstrip())
 str = "88888888this is string example....wow!!!8888888"
 print(str.lstrip('8'))
 
-# zfill() 方法返回指定长度的字符串，原字符串右对齐，前面填充0。
+# zfill() 方法返回指定长度的字符串，原字符串右对齐，不足前面填充0。
 str = "this is string example from runoob....wow!!!"
-print ("str.zfill : ",str.zfill(40))
-print ("str.zfill : ",str.zfill(50))
-
+print("str.zfill : ", str.zfill(10))
+print("str.zfill : ", str.zfill(40))
+print("str.zfill : ", str.zfill(50))

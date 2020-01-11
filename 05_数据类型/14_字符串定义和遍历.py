@@ -4,5 +4,7 @@ print(str1)
 str = "hello word"
 print(str[6])  # 以数组索引方式输出字符
 
+print("---------")
+# for in : 遍历字符串
 for char in str:  # 遍历字符串
     print(char)
