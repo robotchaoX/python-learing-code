@@ -1,7 +1,10 @@
-def demo(num):
+def sum_number(num):
     print(num)
+    # 递归的出口，当参数满足某个条件时，不再执行函
     if num == 1:
         return
-    demo(num-1)
+    # 自己调用自己
+    sum_number(num - 1)  # 递归
 
-demo(3)
+
+sum_number(3)

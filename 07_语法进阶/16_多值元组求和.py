@@ -1,5 +1,16 @@
-# def sum_numbers(args): # 直接传递元组
-def sum_numbers(*args): # 多值参数传递元组
+def sum_numbers(args_tuple):  # 直接传递元组
+    num = 0
+    print(args_tuple)
+    for num in args_tuple:
+        num += num
+    return num
+
+
+result = sum_numbers((1, 2, 3))  # 直接传递元组
+print(result)
+
+
+def sum_numbers(*args):  # 多值参数传递元组
     num = 0
     print(args)
 
@@ -9,6 +20,5 @@ def sum_numbers(*args): # 多值参数传递元组
     return num
 
 
-# result = sum_numbers((1,2,3))  # 直接传递元组
-result = sum_numbers(1,2,3)  # 多值参数传递元组
+result = sum_numbers(1, 2, 3)  # 多值参数传递元组
 print(result)

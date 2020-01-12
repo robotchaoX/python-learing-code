@@ -1,5 +1,5 @@
-#缺省参数放末尾
-def print_info(name, gender=True):
+# 缺省参数放末尾
+def print_info(name, gender=True):  # 默认值
     gender_text = "男生"
     if not gender:
         gender_text = "女生"
@@ -7,4 +7,5 @@ def print_info(name, gender=True):
 
 
 print_info("小明")
-print_info("小美",False)
+print_info("小美", False)
+print_info("小美", False)
