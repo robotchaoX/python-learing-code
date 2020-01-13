@@ -1,14 +1,4 @@
-"""
-__title__ = ''
-__author__ = 'chao'
-__mtime__ = '18-12-6'
-__version__=''
-__packages__=','
-__description__=''
-"""
-
-
-class Animal():
+class Animal:
     def eat(self):
         print("eat--")
 
@@ -21,8 +11,9 @@ class Animal():
     def drink(self):
         print("drink--")
 
-# class 子类名(父类名):  #子类继承父类的所有属性和方法
-class Dog():
+
+# 不用继承
+class Dog:
     def eat(self):
         print("eat")
 
@@ -39,26 +30,9 @@ class Dog():
         print("bark汪汪叫")
 
 
+# 创建一个对象 - 狗对象
 wangcai = Dog()
 wangcai.eat()
 wangcai.drink()
 wangcai.run()
 wangcai.bark()
-
-
-"""
-# code is far away from bugs with the god animal protecting
-    I love animals. They taste delicious.
-              ┏┓      ┏┓
-            ┏┛┻━━━┛┻┓
-            ┃      ☃      ┃
-            ┃  ┳┛  ┗┳  ┃
-            ┃      ┻      ┃
-            ┗━┓      ┏━┛
-                ┃      ┗━━━┓
-                ┃   神兽保佑   ┣┓
-                ┃ 　永无BUG！  ┏┛
-                ┗┓┓┏━┳┓┏┛
-                  ┃┫┫  ┃┫┫
-                  ┗┻┛  ┗┻┛
-"""

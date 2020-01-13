@@ -1,32 +1,25 @@
-#! /usr/bin/env python
-# -*- coding:utf-8 -*-
-# ---------------------------------------------------
-#   Project :  09_面向对象特性
-#   File    :  _17_方法综合.py
-#   Author  :  chao
-#   Date    :  18-12-7 下午5:32
-# ---------------------------------------------------
-"""
-Description:
-"""
-
-
 class Game(object):
-    top_score = 99  # 类属性
-    __least_score = 1  # 类私有属性
+    # 类属性
+    top_score = 99
+    # 类私有属性
+    __least_score = 1
 
+    # 类方法
     @classmethod
     def show_top_score(cls):  # 类方法
         print("历史最高记录 %d" % cls.top_score)
 
+    # 静态方法
     @staticmethod
-    def show_help():  # 类静态方法
+    def show_help():  # 不需要任何参数
         print("帮助信息:让僵尸进入大门")
 
     def __init__(self, player_name):
+        # 对象属性成员
         self.player_name = player_name  # 实例公有属性
         self.__lose_times = 1  # 实例私有属性
 
+    # 成员函数
     def start_game(self):  # 实例公有方法
         print("%s 开始游戏啦..." % self.player_name)
         print("类公有属性 :top_score %d" % self.top_score)  # 实例调用类公有属性
@@ -42,15 +35,15 @@ class Game(object):
 game_p1 = Game("小明")  # 创建实例
 
 # 调用类属性
-print("实例调用类属性", game_p1.top_score)  # 实例调用类属性
 print("类调用类属性", Game.top_score)  # 类调用类属性
+print("实例调用类属性", game_p1.top_score)  # 实例调用类属性,不推荐
 
 # 调用类方法
 game_p1.show_top_score()  # 实例调用类方法
 Game.show_top_score()  # 类调用类方法
 
 # 调用静态方法
-game_p1.show_help()  # 实例调用静态方法
+game_p1.show_help()  # 实例调用静态方法,不推荐
 Game.show_help()  # 类调用类静态方法
 
 # 调用实例公有方法
@@ -69,22 +62,3 @@ print("实例公有属性:", game_p1.player_name)  # 实例公有方法
 # 访问实例私有属性
 # print("实例私有属性:", game_p1.__lose_times)  # 外部不可调用私有属性
 # print("实例私有属性:", Game.__lose_times)  # 外部不可调用私有属性
-
-
-
-"""
-code is far away from bugs with the god animal protecting
-    I love animals. They taste delicious.
-              ┏┓      ┏┓
-            ┏┛┻━━━┛┻┓
-            ┃      ☃      ┃
-            ┃  ┳┛  ┗┳  ┃
-            ┃      ┻      ┃
-            ┗━┓      ┏━┛
-                ┃      ┗━━━┓
-                ┃   神兽保佑   ┣┓
-                ┃ 　永无BUG！  ┏┛
-                ┗┓┓┏━┳┓┏┛
-                  ┃┫┫  ┃┫┫
-                  ┗┻┛  ┗┻┛
-"""

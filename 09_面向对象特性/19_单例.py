@@ -1,20 +1,14 @@
 #! /usr/bin/env python
 # -*- coding:utf-8 -*-
-# ----------------------------------------------------------
-#   Project :  09_面向对象特性
-#   File    :  _19_单例.py
-#   Author  :  chao
-#   Date    :  18-12-8 
-# ----------------------------------------------------------
 
 
 class MusicPlayer(object):
-    # 记录第一个被创建的对象的地址
+    # 类属性,记录第一个被创建的对象的地址
     instance = None
 
     def __new__(cls, *args, **kwargs):  # 重写__new__方法
         # 判断属性是否为空对象
-        if cls.instance is None:
+        if cls.instance is None:  # 只有第一次创建对象时才分配空间
             # 调用父类的方法为第一个对象分配空间
             cls.instance = super().__new__(cls)
         # 返回类属性保存的对象
@@ -27,20 +21,3 @@ player1 = MusicPlayer()
 print(player1)
 player2 = MusicPlayer()
 print(player2)
-
-"""
-code is far away from bugs with the god animal protecting
-    I love animals. They taste delicious.
-              ┏┓      ┏┓
-            ┏┛┻━━━┛┻┓
-            ┃      ☃      ┃
-            ┃  ┳┛  ┗┳  ┃
-            ┃      ┻      ┃
-            ┗━┓      ┏━┛
-                ┃      ┗━━━┓
-                ┃   神兽保佑   ┣┓
-                ┃ 　永无BUG！  ┏┛
-                ┗┓┓┏━┳┓┏┛
-                  ┃┫┫  ┃┫┫
-                  ┗┻┛  ┗┻┛
-"""

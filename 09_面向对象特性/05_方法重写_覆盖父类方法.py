@@ -1,13 +1,3 @@
-"""
-__title__ = ''
-__author__ = 'chao'
-__mtime__ = '18-12-6'
-__version__=''
-__packages__=','
-__description__=''
-"""
-
-
 class Animal():
     def eat(self):
         print("eat--")
@@ -32,27 +22,12 @@ class XiaoTianQuan(Dog):
     def fly(self):
         print("fly")
 
-    # 当父类的方法不满足子类需求时,可对方法进行重写
+    # 重写父类方法
     def bark(self):  # 覆盖 # 方法重写(定义一个跟父类同名的方法,覆盖父类的方法)
         print("方法重写: 叫得跟神一样")
 
 
 xtq = XiaoTianQuan()
+# 如果子类中，重写了父类的方法
+# 在使用子类对象调用方法时，会调用子类中重写的方法
 xtq.bark()
-
-"""
-# code is far away from bugs with the god animal protecting
-    I love animals. They taste delicious.
-              ┏┓      ┏┓
-            ┏┛┻━━━┛┻┓
-            ┃      ☃      ┃
-            ┃  ┳┛  ┗┳  ┃
-            ┃      ┻      ┃
-            ┗━┓      ┏━┛
-                ┃      ┗━━━┓
-                ┃   神兽保佑   ┣┓
-                ┃ 　永无BUG！  ┏┛
-                ┗┓┓┏━┳┓┏┛
-                  ┃┫┫  ┃┫┫
-                  ┗┻┛  ┗┻┛
-"""

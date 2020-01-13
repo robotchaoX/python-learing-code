@@ -1,11 +1,5 @@
 #! /usr/bin/env python
 # -*- coding:utf-8 -*-
-# ----------------------------------------------------------
-#   Project :  09_面向对象特性
-#   File    :  _19_单例.py
-#   Author  :  chao
-#   Date    :  18-12-8
-# ----------------------------------------------------------
 
 
 class MusicPlayer(object):
@@ -39,20 +33,3 @@ player1 = MusicPlayer()
 print(player1)
 player2 = MusicPlayer()
 print(player2)
-
-"""
-code is far away from bugs with the god animal protecting
-    I love animals. They taste delicious.
-              ┏┓      ┏┓
-            ┏┛┻━━━┛┻┓
-            ┃      ☃      ┃
-            ┃  ┳┛  ┗┳  ┃
-            ┃      ┻      ┃
-            ┗━┓      ┏━┛
-                ┃      ┗━━━┓
-                ┃   神兽保佑   ┣┓
-                ┃ 　永无BUG！  ┏┛
-                ┗┓┓┏━┳┓┏┛
-                  ┃┫┫  ┃┫┫
-                  ┗┻┛  ┗┻┛
-"""

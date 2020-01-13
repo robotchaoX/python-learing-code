@@ -1,13 +1,3 @@
-"""
-__title__ = ''
-__author__ = 'chao'
-__mtime__ = '18-12-7'
-__version__=''
-__packages__=','
-__description__=''
-"""
-
-
 class Dog(object):
     def __init__(self, name):
         self.name = name
@@ -27,33 +17,16 @@ class Person(object):
 
     def game_with_dog(self, dog):
         print("%s 和 %s 快乐的玩耍" % (self.name, dog.name))
-        # 让狗玩耍
-        dog.game()
+        # 传入父类对象调用父类方法,传入子类对象调用子类方法
+        dog.game()  # 多态
+
 
 # 创建狗对象
 # wangcai = Dog("旺财")
-wangcai = XiaoTianQuan("飞天旺财")
+wangcai = XiaoTianQuan("哮天犬")
+
 # 创建小明对象
 xiaoming = Person("小明")
+
 # 小明调用狗玩耍
-xiaoming.game_with_dog(wangcai)
-
-
-
-
-"""
-# code is far away from bugs with the god animal protecting
-    I love animals. They taste delicious.
-              ┏┓      ┏┓
-            ┏┛┻━━━┛┻┓
-            ┃      ☃      ┃
-            ┃  ┳┛  ┗┳  ┃
-            ┃      ┻      ┃
-            ┗━┓      ┏━┛
-                ┃      ┗━━━┓
-                ┃   神兽保佑   ┣┓
-                ┃ 　永无BUG！  ┏┛
-                ┗┓┓┏━┳┓┏┛
-                  ┃┫┫  ┃┫┫
-                  ┗┻┛  ┗┻┛
-"""
+xiaoming.game_with_dog(wangcai)  # 传入父类对象调用父类方法,传入子类对象调用子类方法

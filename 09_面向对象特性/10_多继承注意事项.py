@@ -1,56 +1,23 @@
-"""
-__title__ = ''
-__author__ = 'chao'
-__mtime__ = '18-12-7'
-__version__=''
-__packages__=','
-__description__=''
-"""
-
-
 class A():
-    def aa(self):
-        print("A -- aa")
-
-    def bb(self):
-        print("A -- aa")
+    def demo(self):  # 重名
+        print("A 类--- demo 方法")
 
 
 class B:
-    def aa(self):
-        print("B -- bb")
-
-    def bb(self):
-        print("B -- bb")
+    def demo(self):  # 重名
+        print("B 类 --- demo 方法")
 
 
-# 多继承
-# class C(A, B):
-class C(B, A):
+# 多继承的基类方法有重名
+# class C(A, B):  # A 类--- demo 方法
+class C(B, A):  # B 类 --- demo 方法
     pass
 
 
 # 创建子类对象
 c = C()
-c.aa()
-c.bb()
+# 多继承的基类方法有重名,所以具体哪个不一定??
+c.demo()  # A / B 类不一定??
 
+# 确定C类对象调用方法的顺序
 print(C.__mro__)
-
-
-"""
-# code is far away from bugs with the god animal protecting
-    I love animals. They taste delicious.
-              ┏┓      ┏┓
-            ┏┛┻━━━┛┻┓
-            ┃      ☃      ┃
-            ┃  ┳┛  ┗┳  ┃
-            ┃      ┻      ┃
-            ┗━┓      ┏━┛
-                ┃      ┗━━━┓
-                ┃   神兽保佑   ┣┓
-                ┃ 　永无BUG！  ┏┛
-                ┗┓┓┏━┳┓┏┛
-                  ┃┫┫  ┃┫┫
-                  ┗┻┛  ┗┻┛
-"""
