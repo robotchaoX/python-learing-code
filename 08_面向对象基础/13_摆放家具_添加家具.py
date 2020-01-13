@@ -1,14 +1,4 @@
-"""
-__title__ = ''
-__author__ = 'chao'
-__mtime__ = '18-12-3'
-__version__=''
-__packages__=,
-__description__=''
-"""
-
-
-# 创建家具类
+# 家具类
 class HouseFurniture():
     def __init__(self, name, area):  # 外部形参
         self.name = name  # 定义属性
@@ -36,12 +26,10 @@ class House():
         print("要添加 {%s}" % furniture)
         # 1 判断家具的大小
         if furniture.area > self.free_area:
-            print("%s 的面积太大了,无法添加" % furniture.area)
+            print("%s 的面积太大了,无法添加" % furniture.name)
             return  # 忽略后面的代码,直接返回到调用的地方
-
         # 2 将家具的名称添加到列表中
         self.furniture_list.append(furniture.name)
-
         # 3 计算剩余面积
         self.free_area -= furniture.area
 
@@ -63,20 +51,3 @@ my_house.add_furniture(bed)
 my_house.add_furniture(chest)
 my_house.add_furniture(table)
 print(my_house)
-
-"""
-# code is far away from bugs with the god animal protecting
-    I love animals. They taste delicious.
-              ┏┓      ┏┓
-            ┏┛┻━━━┛┻┓
-            ┃      ☃      ┃
-            ┃  ┳┛  ┗┳  ┃
-            ┃      ┻      ┃
-            ┗━┓      ┏━┛
-                ┃      ┗━━━┓
-                ┃   神兽保佑   ┣┓
-                ┃ 　永无BUG！  ┏┛
-                ┗┓┓┏━┳┓┏┛
-                  ┃┫┫  ┃┫┫
-                  ┗┻┛  ┗┻┛
-"""

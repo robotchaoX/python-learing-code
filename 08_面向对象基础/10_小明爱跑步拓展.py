@@ -1,9 +1,3 @@
-"""
-__title__ = ''
-__author__ = 'chao'
-__mtime__ = '18-12-3'
-"""
-
 # 对象的方法内部可以直接访问属性
 # 同一个类 不同对象之间属性互不干扰
 class Person():
@@ -38,20 +32,3 @@ print(xiao_mei)
 
 # 同一个类 不同对象之间属性互不干扰
 print(xiao_ming)
-
-"""
-# code is far away from bugs with the god animal protecting
-    I love animals. They taste delicious.
-              ┏┓      ┏┓
-            ┏┛┻━━━┛┻┓
-            ┃      ☃      ┃
-            ┃  ┳┛  ┗┳  ┃
-            ┃      ┻      ┃
-            ┗━┓      ┏━┛
-                ┃      ┗━━━┓
-                ┃   神兽保佑   ┣┓
-                ┃ 　永无BUG！  ┏┛
-                ┗┓┓┏━┳┓┏┛
-                  ┃┫┫  ┃┫┫
-                  ┗┻┛  ┗┻┛
-"""

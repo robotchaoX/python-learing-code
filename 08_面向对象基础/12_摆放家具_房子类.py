@@ -1,15 +1,5 @@
-"""
-__title__ = ''
-__author__ = 'chao'
-__mtime__ = '18-12-3'
-__version__=''
-__packages__=,
-__description__=''
-"""
-
-
-# 创建家具类
-class HouseFurniture():
+# 家具类
+class HouseFurniture:
     def __init__(self, name, area):  # 外部形参
         self.name = name  # 定义属性
         self.area = area
@@ -18,14 +8,14 @@ class HouseFurniture():
         return "(__str__ return 打印对象:) [%s] 占地 %.2f " % (self.name, self.area)
 
 
-class House():
+class House:
     def __init__(self, house_type, area):  # 外部参数
         self.house_type = house_type  # 定义属性
         self.area = area
         # 剩余面积
         self.free_area = area  # 初始值
         # 家具名称列表
-        self.furniture_list = []
+        self.furniture_list = []  # 空列表
 
     def __str__(self):
         # 小括号内可换行
@@ -53,20 +43,3 @@ my_house.add_furniture(bed)
 my_house.add_furniture(chest)
 my_house.add_furniture(table)
 print(my_house)
-
-"""
-# code is far away from bugs with the god animal protecting
-    I love animals. They taste delicious.
-              ┏┓      ┏┓
-            ┏┛┻━━━┛┻┓
-            ┃      ☃      ┃
-            ┃  ┳┛  ┗┳  ┃
-            ┃      ┻      ┃
-            ┗━┓      ┏━┛
-                ┃      ┗━━━┓
-                ┃   神兽保佑   ┣┓
-                ┃ 　永无BUG！  ┏┛
-                ┗┓┓┏━┳┓┏┛
-                  ┃┫┫  ┃┫┫
-                  ┗┻┛  ┗┻┛
-"""

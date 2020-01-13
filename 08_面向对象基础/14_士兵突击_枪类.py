@@ -1,19 +1,8 @@
-"""
-__title__ = ''
-__author__ = 'chao'
-__mtime__ = '18-12-5'
-__version__=''
-__packages__=''
-__description__=''
-"""
-
-
 # 定义Gun类
 class Gun():
     def __init__(self, model):  # 定义属性
         # 1 枪型号
         self.model = model
-
         # 2 子弹数量
         self.bullet_count = 0  # 定义属性时初始子弹数量为0
 
@@ -36,20 +25,3 @@ ak47 = Gun("AK47")
 print(ak47)
 ak47.add_bullet(50)
 ak47.shoot()
-
-"""
-# code is far away from bugs with the god animal protecting
-    I love animals. They taste delicious.
-              ┏┓      ┏┓
-            ┏┛┻━━━┛┻┓
-            ┃      ☃      ┃
-            ┃  ┳┛  ┗┳  ┃
-            ┃      ┻      ┃
-            ┗━┓      ┏━┛
-                ┃      ┗━━━┓
-                ┃   神兽保佑   ┣┓
-                ┃ 　永无BUG！  ┏┛
-                ┗┓┓┏━┳┓┏┛
-                  ┃┫┫  ┃┫┫
-                  ┗┻┛  ┗┻┛
-"""
