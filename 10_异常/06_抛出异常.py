@@ -1,46 +1,20 @@
-#! /usr/bin/env python
-# -*- coding:utf-8 -*-
-# ----------------------------------------------------------
-#     Project  :   10_异常
-#     File     :   _06_抛出异常.py
-#     Author   :   chao
-#     Date     :   18-12-9 
-#  Description :
-# ----------------------------------------------------------
-"""
-code is far away from bugs with the god animal protecting
-    I love animals. They taste delicious.
-              ┏┓      ┏┓
-            ┏┛┻━━━┛┻┓
-            ┃      ☃      ┃
-            ┃  ┳┛  ┗┳  ┃
-            ┃      ┻      ┃
-            ┗━┓      ┏━┛
-                ┃      ┗━━━┓
-                ┃   神兽保佑   ┣┓
-                ┃ 　永无BUG！  ┏┛
-                ┗┓┓┏━┳┓┏┛
-                  ┃┫┫  ┃┫┫
-                  ┗┻┛  ┗┻┛
-"""
-
-
 def input_password():
-    pwd = input("输入密码：")
+    # 1. 提示用户输入密码
+    pwd = input("请输入密码：")
 
-    if len(pwd) == 8:
+    # 2. 判断密码长度 >= 8，返回用户输入的密码
+    if len(pwd) >= 8:
         return pwd
 
-    print("抛出异常:")
-
-    # 创建异常对象
-    ex_len_error = Exception()  # 创建异常对象，Exception是异常类
-    # 抛出异常
+    # 3. 如果 < 8 主动抛出异常
+    print("主动抛出异常")
+    # 1> 创建异常对象 - 可以使用错误信息字符串作为参数
+    ex_len_error = Exception("---密码长度不够---")  # 创建异常对象，Exception是异常类
+    # 2> 主动抛出异常
     raise ex_len_error
+
 
 try:
     print(input_password())
 except Exception as error:
     print(error)
-
-
