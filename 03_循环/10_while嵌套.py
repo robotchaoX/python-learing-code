@@ -17,9 +17,9 @@ while row <= 5:  # 行
     # 2. 开始循环
     while col <= row:  # 列
         # print("%d" % col)
-        print("*", end="")
+        print("*", end="")  # print不自动换行
         col += 1
     # print("第 %d 行" % row)
     # 这行代码的目的，就是在一行星星输出完成之后，添加换行！
-    print("")
+    print("")  # 换行
     row += 1
