@@ -4,4 +4,5 @@
 print("hello")
 print("python3")
 print("你好")
-# 后缀名不是 .py 也可以
+
+# python文件后缀名不是 .py 也可以,解释器可以自动识别
