@@ -8,6 +8,7 @@ class HouseFurniture():
         return "(__str__ return 打印对象:) [%s] 占地 %.2f " % (self.name, self.area)
 
 
+# 房子类
 class House():
     def __init__(self, house_type, area):  # 外部参数
         self.house_type = house_type  # 定义属性
