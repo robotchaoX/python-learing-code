@@ -7,6 +7,10 @@ def say_hello():
     print("我是 %s" % title)
 
 
+def say_bye():
+    print("bye %s" % title)
+
+
 # 类
 class Cat(object):
     pass
