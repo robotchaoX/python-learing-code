@@ -26,13 +26,31 @@ print(name_list)
 # 3.2 insert 在列表的指定索引位置插入数据
 name_list.insert(1, "小美眉")  # 插入
 print(name_list)
-
 # 3.3 extend 把其他列表中的完整内容，追加到当前列表的末尾
 name_list = ["zhangsan", "lisi", "wangwu", "zhaoliu"]
 temp_list = ["孙悟空", "猪二哥", "沙师弟"]
 name_list.extend(temp_list)
 name_list.extend("ABC")  # 字符串也是列表，将字符串拆开一个个字符追加
 print(name_list)
+# 3.4 += 等价extend方法
+num_list = [1, 2, 3]
+print("id=", id(num_list), num_list)
+# 列表变量使用 += 不会做相加再赋值的操作 ！
+# 本质上是在调用列表的 extend 方法
+# 列表的 += 等价extend方法,不是list=list+list,与数值不一样
+num_list += num_list  # 等价extend方法
+print("id=", id(num_list), num_list)
+num_list.extend(num_list)  # 等价 +=
+# 3.5 + 方法
+num_list = [1, 2, 3]
+print("id=", id(num_list), num_list)
+num_list = num_list + num_list  # 新建同名变量???
+print("id=", id(num_list), num_list)
+# 3.5 * 方法
+num_list = [1, 2, 3]
+print("id=", id(num_list), num_list)
+num_list = num_list * 3  # 新建同名变量???
+print("id=", id(num_list), num_list)
 
 # 4. 删除
 name_list = ["zhangsan", "张三", "wangwu", "张三"]
