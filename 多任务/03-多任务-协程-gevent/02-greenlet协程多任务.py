@@ -25,14 +25,18 @@ def test2():
         time.sleep(10)
 
 
-print("---------------1-------------")
-# greenlet对象
-gr1 = greenlet(test1)
-gr2 = greenlet(test2)
-print("---------------2-------------")
+def main():
+    print("---------------1-------------")
+    # greenlet对象
+    gr1 = greenlet(test1)
+    gr2 = greenlet(test2)
+    print("---------------2-------------")
+
+    # 切换到gr1中运行
+    gr1.switch()
+
+    print("---main--gr1.switch()--")
 
 
-# 切换到gr1中运行
-gr1.switch()
-
-print("---main--gr1.switch()--")
+if __name__ == '__main__':
+    main()
