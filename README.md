@@ -1,6 +1,8 @@
-# python-learning-code
+# python-code
 
-- python基础
+## python基础
+
+- 基础
 - 分支
 - 循环
 - 数据类型
@@ -10,7 +12,25 @@
 - 模块
 - 文件操作
 
+## 网络
 
+- UDP
+- TCP
+
+## 多任务
+
+- 线程-threading
+- 进程-multiprocessing
+- 协程-gevent
+
+## web服务器
+
+- 单任务http服务器
+- 多线程http服务器
+- 多进程http服务器
+- 协程http服务器
+- 单线程非阻塞长连接http服务器
+- epoll实现http服务器
 
 ```
 $ tree 
@@ -207,5 +227,56 @@ $ tree
 │   ├── 09_os文件操作.py
 │   ├── 10_os目录操作.py
 │   ├── 11_批量输出名-谨慎操作.py
+├── web服务器
+│   ├── 01-简单的http服务器.py
+│   ├── 02-返回固定html文件页面.py
+│   ├── 03-返回请求的html页面.py
+│   ├── 04-单任务http服务器.py
+│   ├── 05-多线程http服务器.py
+│   ├── 06-多进程http服务器.py
+│   ├── 07-协程http服务器.py
+│   ├── 08-单线程-非堵塞-长链接-http服务器.py
+│   ├── 09-epoll实现http.py
+├── 多任务
+│   ├── 01-多任务-线程-threading
+│   │   ├── 01-Thread创建线程.py
+│   │   ├── 02-继承Thread类创建线程.py
+│   │   ├── 03-延时让某些线程先执行.py
+│   │   ├── 04-enumerate查看当前线程.py
+│   │   ├── 05-start后创建执行子线程.py
+│   │   ├── 06-线程间共享全局变量.py
+│   │   ├── 07-子线程传参.py
+│   │   ├── 08-共享全局变量竞争问题.py
+│   │   ├── 09-Lock互斥锁.py
+│   │   ├── 10-互斥锁粒度过小问题.py
+│   │   └── 11-案例：多任务udp聊天.py
+│   ├── 02-多任务-进程-multiprocessing
+│   │   ├── 01-Process创建多进程.py
+│   │   ├── 02-os获取进程的pid.py
+│   │   ├── 03-join主线程阻塞等待子线程.py
+│   │   ├── 04-子进程传参.py
+│   │   ├── 05-进程间不共享全局变量.py
+│   │   ├── 06-Queue进程间通信.py
+│   │   ├── 07-Pool进程池.py
+│   │   ├── 08-案例：多进程复制.py
+│   │   └── 09-案例：多进程赋值-显示进度.py
+│   └── 03-多任务-协程-gevent
+│       ├── 01-yield实现多任务.py
+│       ├── 02-greenlet协程多任务.py
+│       ├── 03-gevent协程多任务.py
+│       ├── 04-gevent打补丁.py
+│       └── 05-案例：协程下载.py
+└── 网络
+    ├── 01-网络-udp
+    │   ├── 01-udp发送数据.py
+    │   ├── 02-udp接收数据.py
+    │   ├── 03-udp-客户端client.py
+    │   ├── 04-udp-服务端server.py
+    │   └── 05-案例：udp聊天.py
+    └── 02-网络-tcp
+        ├── 01-tcp-客户端client.py
+        ├── 02-tcp-服务器server.py
+        ├── 03-案例：文件下载-client.py
+        └── 04-案例：文件下载-server.py
 ```
 
